@@ -66,7 +66,6 @@ src/
 ├── components/
 │   ├── DataTable.tsx          # Renders the table for financial data
 │   ├── Filters.tsx            # Provides filtering options
-│   ├── DarkModeToggle.tsx     # Toggle button for dark mode
 ├── hooks/
 │   ├── useFetchData.ts        # Custom hook for fetching data
 ├── types/
