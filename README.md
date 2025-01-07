@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+# Financial Data Filtering App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a **Financial Data Filtering App** built with **React (TypeScript)** and styled using **TailwindCSS**. It fetches annual income statements for Apple Inc. (AAPL) from the **Financial Modeling Prep API** and allows users to **filter**, **sort**, and **analyze** key financial metrics.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
+- **Data Fetching:** Fetches annual income statements using the Financial Modeling Prep API.
+- **Dynamic Filters:** Filter data by date range, revenue, and net income.
+- **Sorting:** Sort table data by date, revenue, and net income in ascending/descending order.
+- **Responsive Design:** Mobile-friendly and optimized for different screen sizes.
+- **Dark Mode Support:** Supports dark and light themes with a toggle button.
+- **Animations:** Smooth transitions and hover effects for an enhanced user experience.
+- **Loading Spinner:** Displays a spinner while fetching data.
+- **Error Handling:** Provides error messages in case of issues with the API.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
+- **Frontend:** React with TypeScript
+- **Styling:** TailwindCSS
+- **API:** Financial Modeling Prep API
+- **State Management:** React Hooks
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+Ensure you have **Node.js** and **npm** or **yarn** installed.
 
-### `npm run build`
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/financial-data-filtering-app.git
+cd financial-data-filtering-app
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Install Dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Environment Variables
+Create a `.env` file in the root directory and add your API key:
+```env
+REACT_APP_FMP_API_KEY=your_api_key_here
+```
+Replace `your_api_key_here` with your Financial Modeling Prep API key.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Run the App
+```bash
+npm start
+# or
+yarn start
+```
+Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
+```
+src/
+├── components/
+│   ├── DataTable.tsx          # Renders the table for financial data
+│   ├── Filters.tsx            # Provides filtering options
+│   ├── DarkModeToggle.tsx     # Toggle button for dark mode
+├── hooks/
+│   ├── useFetchData.ts        # Custom hook for fetching data
+├── types/
+│   ├── index.ts               # TypeScript types for data model
+├── App.tsx                    # Main app component
+├── index.tsx                  # React entry point
+├── index.css                  # Global styles
+└── .env                       # Environment variables
+```
