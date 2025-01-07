@@ -21,6 +21,13 @@ module.exports = {
           DEFAULT: '#ffffff', // White
           dark: '#374151', // Gray-700
         },
+        // Custom Text Colors for Better Contrast
+        textColor: {
+          light: '#1f2937', // Dark Gray for Light Mode
+          dark: '#f3f4f6', // Light Gray for Dark Mode
+          primary: '#1d4ed8', // Primary Blue
+          'primary-dark': '#3b82f6', // Light Blue
+        },
       },
       transitionProperty: {
         'height': 'height',
@@ -28,4 +35,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
